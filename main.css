@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px !important;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+td, th {
+    border: 1px solid #ffffff;
+    height: 50px;
+}
+tr {
+    background-color: #dddddd;
+}
+#game-level{
+    margin-bottom: 10px;
+}
+.gameWrapper{
+    border-right: 1px solid #dddddd;
+}
+#score-board{
+    text-align: center;
+}
+.coloredTd{
+    background-color: #afdeee;
+}

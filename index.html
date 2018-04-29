@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matrix Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- external style sheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- bootstrap css  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>Lets play a Game</h1>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-6 gameWrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <span>Select Level</span>
+                        <select id="game-level" class="form-control">
+                            <option value="3">Easy</option>
+                            <option value="4">Medium</option>
+                            <option value="6">Hard</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="start-game">Start Game</button>
+                <button type="button" class="btn btn-primary" id="restart-game">Reset</button>
+                <table id="game-matrix">
+                    <thead></thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-sm-6">
+                <h3 id="score-board">Score Board</h3>
+                <p>Time Left:
+                    <span id="time-left">120 seconds</span>
+                </p>
+                <p>Your score:
+                    <span id="your-score">0</span>
+                </p>
+                <p>Highest score:
+                    <span id="highest-score">0</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- script to run game -->
+    <script src="main.js"></script>
+</body>
+
+</html>
+<!-- Modal -->
+<div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="gameModalLabel">Game Over !!!!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Your game is over</p>
+                <p>Your score is :
+                    <span id="modal-score"></span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="restart-game-modal">Reset Game</button>
+            </div>
+        </div>
+    </div>
+</div>
